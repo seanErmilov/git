@@ -7,6 +7,7 @@ function onBallClick(elBall) {
   var currentHeight = parseInt(window.getComputedStyle(elBall).height)
 
   var newHeight = currentHeight + getRandomIntInclusive(20, 60)
+  elBall.style.backgroundColor = getRandomColor()
 
   if (newHeight > 400) newHeight = 100
 
