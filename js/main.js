@@ -15,3 +15,12 @@ function onBallClick(elBall, maxDiameter) {
   elBall.style.width = newHeight + 'px'
   elBall.innerHTML = newHeight
 }
+
+function changeColors() {
+  var elball1 = document.querySelector('.ball1')
+  var elball2 = document.querySelector('.ball2')
+
+  var tempColorBall1 = elball1.style.backgroundColor
+  elball1.style.backgroundColor = elball2.style.backgroundColor
+  elball2.style.backgroundColor = tempColorBall1
+}
