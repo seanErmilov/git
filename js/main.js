@@ -24,3 +24,22 @@ function changeColors() {
   elball1.style.backgroundColor = elball2.style.backgroundColor
   elball2.style.backgroundColor = tempColorBall1
 }
+
+function onReduseSize() {
+  var elBall1 = document.querySelector('.ball1')
+  var elBall2 = document.querySelector('.ball2')
+
+  reduseBallSize(elBall1)
+  reduseBallSize(elBall2)
+}
+
+function reduseBallSize(elball) {
+  var curDimaterBall1 = parseInt(window.getComputedStyle(elball).height)
+  var newHeight = curDimaterBall1 - 50
+
+  if (newHeight < 0) return
+
+  elball.style.height = newHeight + 'px'
+  elball.style.width = newHeight + 'px'
+  elball.innerHTML = newHeight
+}
