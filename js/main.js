@@ -35,11 +35,14 @@ function onReduseSize() {
 
 function reduseBallSize(elball) {
   var curDimaterBall1 = parseInt(window.getComputedStyle(elball).height)
-  var newHeight = curDimaterBall1 - 50
+  // var newHeight = curDimaterBall1 - 60
+  var newHeight = curDimaterBall1 - getRandomIntInclusive(20, 60)
 
-  if (newHeight < 0) return
+  if (newHeight < 100) return
 
   elball.style.height = newHeight + 'px'
   elball.style.width = newHeight + 'px'
   elball.innerHTML = newHeight
 }
+
+function onRBackgroundColorchange() {}
